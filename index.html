@@ -10,7 +10,7 @@
       padding: 0;
       height: 100%;
       overflow: hidden;
-      background: black; /* just in  case */
+      background: black;
     }
     iframe {
       border: none;
@@ -19,6 +19,13 @@
       display: block;
     }
   </style>
+  <script>
+    // Check if loaded over HTTPS, redirect to your HTTP short domain
+    if (window.location.protocol === 'https:') {
+      // Change this if it's media.a04.org instead
+      window.location.replace('http://m.a04.org' + window.location.pathname);
+    }
+  </script>
 </head>
 <body>
   <iframe src="http://media.a04.org:8096" allowfullscreen></iframe>
